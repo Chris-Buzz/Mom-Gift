@@ -7,7 +7,7 @@ const images = [
 
 const notes = [
   "You are the best mom in the world!",
-  "Thank you for always being there for us.",
+  "Thank you for exyerhting you do for me Mom. I love you to infinity and beyond- Chris",
   "We love you to the moon and back.",
 ];
 
