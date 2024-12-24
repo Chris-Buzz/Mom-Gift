@@ -9,26 +9,22 @@
 </head>
 <body>
   <div class="app-container">
-    <!-- Header Section -->
     <header class="header">
       <h1>Hi Mom! 💚</h1>
       <p class="subtitle">A collection of love, just for you.</p>
     </header>
 
-    <!-- Photo Gallery Section -->
     <section class="section">
       <h2>Your Favorite Moments</h2>
       <div class="gallery" id="gallery"></div>
       <button class="button" id="newImagesBtn">Generate New Images</button>
     </section>
 
-    <!-- Notes Section -->
     <section class="section">
       <h2>Sweet Notes</h2>
       <div class="notes-container" id="notes"></div>
     </section>
 
-    <!-- Dinner Date Section -->
     <section class="section">
       <h2>Dinner Date with Mom</h2>
       <p>Click the button below to see the special menu we made for you!</p>
@@ -36,19 +32,18 @@
     </section>
   </div>
 
-  <!-- Modal for Enlarged Image -->
   <div id="imageModal" class="modal">
     <span class="close" id="closeImageModal">&times;</span>
-    <img class="modal-content" id="enlargedImage">
+    <img class="modal-content" id="enlargedImage" alt="Enlarged Image">
+    <button class="close-bottom">Close</button>
   </div>
 
-  <!-- Modal for Expanded Note -->
   <div id="noteModal" class="modal">
     <span class="close" id="closeNoteModal">&times;</span>
     <div class="modal-text" id="expandedNote"></div>
+    <button class="close-bottom">Close</button>
   </div>
 
-  <!-- Modal for Dinner Menu -->
   <div id="menuModal" class="modal">
     <span class="close" id="closeMenuModal">&times;</span>
     <div class="modal-content">
@@ -56,10 +51,10 @@
       <!-- Replace "menu.png" with the path to your menu file -->
       <p>If you can't see the image, you can <a href="menu.pdf" download>download the menu here</a>.</p>
       <!-- Replace "menu.pdf" with the actual path to your PDF file -->
+      <button class="close-bottom">Close</button>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>Made with love by your kids 💕</p>
   </footer>
