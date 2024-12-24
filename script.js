@@ -6,7 +6,10 @@ const images = [
   'assets/moment29.jpeg', 'assets/moment30.JPG', 'assets/moment31.JPG', 'assets/moment32.JPG', 'assets/moment33.JPEG', 'assets/moment34.JPEG',
   'assets/moment35.JPG', 'assets/moment36.JPG', 'assets/moment37.JPG', 'assets/moment38.PNG', 'assets/moment39.JPG', 'assets/moment40.PNG',
   'assets/moment41.JPEG', 'assets/moment42.jpg', 'assets/moment43.jpg', 'assets/moment44.jpg', 'assets/moment45.jpg', 'assets/moment46.jpg',
-  'assets/moment47.jpg', 'assets/moment48.jpg', 'assets/moment49.jpg', 'assets/moment50.jpg', 'assets/moment51.jpg'
+  'assets/moment52.jpg', 'assets/momentmoment53.jpg', 'assets/moment54.jpg', 'assets/moment55.jpg', 'assets/moment56.jpg','assets/moment57.jpg', 
+  'assets/moment59.jpg', 'assets/moment60.jpg', 'assets/moment61.jpg', 'assets/moment62.jpg','assets/moment63.jpg','assets/moment64.jpg',
+  'assets/moment65.jpg',
+
 ];
 
 const notesAndEssays = [
