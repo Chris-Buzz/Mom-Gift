@@ -1,202 +1,246 @@
-/* General Reset */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #imageModal, #noteModal, #menuModal {
+    display: none; 
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #88d499;
+    background-size: cover;
+    color: #91e0c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .app-container {
+    width: 95%;
+    max-width: 375px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(47, 77, 65, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .header h1 {
+    font-size: 2rem;
+    color: #88d499; 
+  }
+  
+  .header .subtitle {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #b7e3c5;
+  }
+  
 
-/* Body Styling */
-body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #88d499;
-  background-size: cover;
-  color: #91e0c4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .section {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .section h2 {
+    margin-bottom: 15px;
+    color: #88d499;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #88d499;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
 
-/* App Container */
-.app-container {
-  width: 95%;
-  max-width: 375px; /* iPhone dimensions */
-  margin: 20px auto;
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(47, 77, 65, 0.6);
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
 
-/* Header Section */
-.header h1 {
-  font-size: 2rem;
-  color: #88d499; /* Fashionable green */
-}
+  .notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .notes-container p {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #154c29;
+    font-style: italic;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .notes-container p:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+  }
+  
+  .modal {
+    max-width: 375px;
+    max-height: 650px;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    max-height: 90%; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;  
+  }
+  
+  .modal-text {
+    max-width: 360px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #154c29;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: 4px solid #154c29;
+  }
+  
+  
+  .modal .close {
+    position: absolute; 
+    top: 0px;
+    right: 8px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  .modal .close-bottom {
+    padding: 12px 22px;
+    margin-top: 10px; 
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: white;
+    background-color: #2f703d;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .modal .close-bottom:hover {
+    background-color: #76c188;
+    transform: scale(1.05); 
+    transform: translateY(2px);/
+  }
+  
+  
+  .dinner-date {
+    background-color: rgba(144, 238, 144, 0.2);
+    border: 2px solid #88d499;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dinner-date button {
+    background-color: #ff8c94;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .dinner-date button:hover {
+    background-color: #ff6377;
+    transform: scale(1.05);
+  }
+  
 
-.header .subtitle {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #b7e3c5;
-}
+  .button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #88d499;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #76c188;
+    transform: scale(1.05);
+    transform: translateY(2px);
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .close:hover {
+    transform: scale(1.1);
+  }
 
-/* Section Styling */
-.section {
-  margin-top: 20px;
-  padding: 10px 0;
-}
-
-.section h2 {
-  margin-bottom: 15px;
-  color: #88d499;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #88d499;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-/* Gallery Styling */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Notes Styling */
-.notes-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.notes-container p {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  color: #154c29;
-  font-style: italic;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.notes-container p:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: scale(1.02);
-}
-
-/* Modal Styling */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.modal-text {
-  max-width: 80%;
-  padding: 20px;
-  background-color: #ffffff;
-  color: #154c29;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-/* Dinner Date Section */
-.dinner-date {
-  background-color: rgba(144, 238, 144, 0.2);
-  border: 2px solid #88d499;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.dinner-date button {
-  background-color: #ff8c94;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.dinner-date button:hover {
-  background-color: #ff6377;
-  transform: scale(1.05);
-}
-
-/* Button Styling */
-.button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
-  background-color: #88d499;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.button:hover {
-  background-color: #76c188;
-  transform: scale(1.05);
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #ffffff;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.close:hover {
-  transform: scale(1.1);
-}
-
-/* Footer Styling */
-footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #18251b;
-  font-size: 0.9rem;
-  padding-bottom: 10px;
-}
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #18251b;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+  }
